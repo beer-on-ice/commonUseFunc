@@ -23,3 +23,17 @@ inheritPrototype(Child, Parent)
 /*
  * 优缺点：这是一种完美的继承方式
  */
+
+
+ {
+   function P = function() {
+     this.x = 123
+   }
+   P.prototype = function(){}
+
+   function C = function() {
+     P.call(this)
+   }
+   C.prototype  = Object.create(P.prototype)
+   C.prototype.constructor = C
+ }

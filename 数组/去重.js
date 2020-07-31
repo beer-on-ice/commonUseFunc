@@ -10,7 +10,7 @@
 }
 
 {
-  // 利用filter
+  // 利用filter ---- array.indexOf(item,start)
   const unique = arr =>
     arr.filter((item, index, arr) => arr.indexOf(item, 0) === index)
 }
@@ -63,3 +63,20 @@
     return result
   }
 }
+
+// {
+//   const unique = arr =>
+//     arr.reduce(
+//       (prev, item) => (prev.includes(item) ? prev : [...prev, item]),
+//       []
+//     )
+// }
+// {
+//   let arr = [1, 2, 3, 4, 4, 4]
+//   const unique = arr =>
+//     arr.filter((item, index, arr) => {
+//       console.log(arr.indexOf(item))
+//       return arr.indexOf(item) === index
+//     })
+//   unique(arr)
+// }
